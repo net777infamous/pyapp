@@ -35,7 +35,9 @@ def get_status(name):
           return ("True")
       else: return ("False")
 
-
+@app.route('/who', methods=["GET", "POST"])
+def who():
+    return('https://chaturbate.com/'+user)
 
 
 if __name__ == '__main__':
