@@ -39,7 +39,6 @@ def users():
             e = requests.get('https://cbjpeg.stream.highwebmedia.com/stream?room='+x)
             on = (e.status_code)
             if (on == 200 and x not in blacklist) :
-                logger.critical(x)
                 global user
                 user = x
                 
