@@ -27,6 +27,14 @@ def users():
                 
                 return (x)
 
+@app.route("/status/<name>")
+def get_status(name):
+      e = requests.get('https://cbjpeg.stream.highwebmedia.com/stream?room='+name)
+      on = (e.status_code)
+      if (on == 200):
+          return ("True")
+      else: return ("False")
+
 
 
 
